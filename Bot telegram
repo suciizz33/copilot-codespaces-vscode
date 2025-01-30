@@ -1,0 +1,17 @@
+sync def stats (update: Update, context):
+if update.message.from user.id != ADMIN_ ID:
+# Replace with your admin user ID
+await update.message.reply text ("X
+'re not authorized to use thig command.")
+return
+total downloads - sum (USER _DOWNLOADS. values ())
+await update.message. reply_ text (I° ill *Bot Statg*\n\nTotal Downloads: (total_downloads)", parse _mode-"Markdown")
+# Main function to run the bot
+# Create the Application
+application - Application.builder ().token (BOT TOKEN) .build ()
+Add handlers
+application.add handler(CommandHandler ("start", start))
+application.add_handler (MessageHandler (filters.TEXT 6 ~filters.COMMAND, download _video))
+application.add handler(CallbackQueryHandler (button callback))
+Start the bot
+application.run polling ()
